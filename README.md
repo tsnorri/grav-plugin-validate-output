@@ -32,8 +32,8 @@ Here is the default configuration and an explanation of available options:
 
 ```yaml
 enabled: true
-use\_dom\_document: true
-use\_tidy: true
+use_dom_document: true
+use_tidy: true
 ```
 
 ## Usage
