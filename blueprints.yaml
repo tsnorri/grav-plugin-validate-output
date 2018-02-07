@@ -1,0 +1,42 @@
+name: Validate Output
+version: 0.1.0
+description: Validate HTML output
+icon: plug
+author:
+  name: Tuukka Norri
+  email: tsnorri@iki.fi
+homepage: https://github.com/tsnorri/grav-plugin-validate-output
+keywords: grav, plugin, validate, html
+bugs: https://github.com/tsnorri/grav-plugin-validate-output/issues
+docs: https://github.com/tsnorri/grav-plugin-validate-output/blob/develop/README.md
+license: MIT
+
+form:
+  validation: strict
+  fields:
+    enabled:
+      type: toggle
+      label: Plugin status
+      highlight: 1
+      default: 0
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+    use_dom_document:
+      type: toggle
+      label: Use DOMDocument to validate the output
+      highlight: 1
+      default: 1
+      options:
+        1: Enabled
+        0: Disabled
+    use_tidy:
+      type: toggle
+      label: Use Tidy to validate the output
+      highlight: 1
+      default: 1
+      options:
+        1: Enabled
+        0: Disabled
