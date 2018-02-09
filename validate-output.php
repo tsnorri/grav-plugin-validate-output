@@ -115,7 +115,7 @@ class ValidateOutputPlugin extends Plugin
 				{
 					$uri = $this->grav['uri'];
 					$this->grav['log']->warning(sprintf("Validate Output: Unable to parse the document for %s with Tidy.", $uri));
-					break;
+					goto end_tidy;
 				}
 			
 				$result = $tidy->getStatus();
@@ -126,6 +126,8 @@ class ValidateOutputPlugin extends Plugin
 					$msg = sprintf("Validate Output: Tidy reported the following errors for %s: %s", $uri, $errors);
 					$this->grav['log']->warning($msg);
 				}
+			end_tidy:
+				;
 			}
 		}
 	}
